@@ -5,5 +5,5 @@ export const logger = color => {
 };
 
 export const tock = time => {
-  setTimeout(() => tick(), 1000);
+  tick();
 };
