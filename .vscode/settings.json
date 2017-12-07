@@ -1,0 +1,11 @@
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": ".*",
+        "cmd":
+          "C:\\Users\\jairo.viciana\\AppData\\Roaming\\npm\\tsc.cmd --p ${workspaceRoot}\\tsconfig.json"
+      }
+    ]
+  }
+}
