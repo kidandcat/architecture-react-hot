@@ -1,8 +1,13 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { App } from "./components/app";
-import { Store } from "./State/store";
-import { InitReactors } from "./State/selectors";
+import { LoadReactions } from "./State/selectors";
+import { tick } from "./State/actions";
 
-InitReactors();
+LoadReactions();
+
 ReactDOM.render(<App />, document.getElementById("root"));
+
+setTimeout(() => {
+  tick();
+}, 1000);

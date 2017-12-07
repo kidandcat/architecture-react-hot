@@ -1,9 +1,8 @@
-import { logger } from "./reactors";
-import { reaction } from "mobx";
+import { logger, tock } from "./reactors";
+import { reaction, autorun } from "mobx";
 import { Store } from "./store";
 
-const colorLoggerReactor = reaction(() => Store.color, logger);
-
-export const InitReactors = () => {
-  colorLoggerReactor();
+export const LoadReactions = () => {
+  reaction(() => Store.color, logger);
+  reaction(() => Store.time, tock);
 };

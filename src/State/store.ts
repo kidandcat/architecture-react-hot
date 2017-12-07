@@ -2,13 +2,15 @@ import { observable, toJS } from "mobx";
 
 let makeStore = () => {
   const store = observable({
-    color: "black"
+    color: "black",
+    time: new Date().toUTCString()
   });
   return store;
 };
 
 export interface Store {
   color: string;
+  time: string;
 }
 
 export let Store = makeStore();
