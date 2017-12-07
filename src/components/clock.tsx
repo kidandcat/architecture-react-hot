@@ -2,9 +2,16 @@ import * as React from "react";
 import { observer } from "mobx-react";
 import { Store } from "../State/store";
 import { changeColor } from "../State/actions";
+import { SyntheticEvent } from "react";
 
+interface State {
+  time: string;
+}
 @observer
-export class Clock extends React.Component<{}, {}> {
+export class Clock extends React.Component<{}, State> {
+  private timer: number;
+  private tempColor: string;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -24,8 +31,8 @@ export class Clock extends React.Component<{}, {}> {
     clearInterval(this.timer);
   }
 
-  saveTemporalColor = (e: Event) => {
-    this.tempColor = e.target.value;
+  saveTemporalColor = (e: SyntheticEvent<HTMLInputElement>) => {
+    this.tempColor = e.currentTarget.value;
   };
 
   render() {

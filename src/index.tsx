@@ -5,9 +5,4 @@ import { Store } from "./State/store";
 import { InitReactors } from "./State/selectors";
 
 InitReactors();
-ReactDOM.render(
-  <div>
-    <App />
-  </div>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
