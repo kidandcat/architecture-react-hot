@@ -1,7 +1,6 @@
 import * as React from "react";
 import { observer } from "mobx-react";
 import { Store } from "../State/store";
-import { ColorChanger } from "./colorChanger";
 
 interface State {
   time: string;
@@ -32,10 +31,7 @@ export class Clock extends React.Component<{}, State> {
 
   render() {
     return (
-      <div>
-        <ColorChanger />
-        <div style={{ color: Store.color }}>{this.state.time}</div>
-      </div>
+      <div style={{ color: Store.color }}>{this.state.time.split(" ")[4]}</div>
     );
   }
 }
