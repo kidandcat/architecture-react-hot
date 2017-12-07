@@ -1,6 +1,6 @@
-import { observable } from "mobx";
+import { observable, toJS } from "mobx";
 
-const makeStore = () => {
+let makeStore = () => {
   const store = observable({
     color: "black"
   });
@@ -11,4 +11,24 @@ export interface Store {
   color: string;
 }
 
-export const Store = makeStore();
+export let Store = makeStore();
+
+if (module.hot) {
+  console.log("module.hot");
+  module.hot.dispose(function() {
+    console.log("disposed");
+    window.localStorage.setItem("_STORE", JSON.stringify(toJS(Store)));
+  });
+
+  module.hot.accept(function() {
+    console.log("accepted");
+    const storedStore = window.localStorage.getItem("_STORE");
+    if (storedStore) {
+      makeStore = () => {
+        const store = observable(JSON.parse(storedStore));
+        return store;
+      };
+      Store = makeStore();
+    }
+  });
+}
