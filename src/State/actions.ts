@@ -9,6 +9,5 @@ export const changeColor = action((newColor: string) => {
 });
 
 export const tick = action(() => {
-  console.log("tick: ", new Date().toUTCString());
   Store.time = new Date().toUTCString();
 });
