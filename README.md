@@ -45,3 +45,9 @@ parcel build index.html
 
 The Store.js saves the state in LocalStorage when Hot module is removing a
 component so you will have it untouched.
+
+### Known Bugs
+
+* When Hot Reloading, the reactions reexecute, so they will be launched many
+  times per change after a Hot Reload.
+* Same with listeners.
