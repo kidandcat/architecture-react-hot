@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "parcel index.html",
-    "build": "tsc --p tsconfig.json && parcel build index.html"
+    "build": "tsc --p tsconfig.json && parcel build index.html --no-minify"
   },
   "keywords": [],
   "author": "Jairo Caro-Accino Viciana",

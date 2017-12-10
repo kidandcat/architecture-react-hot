@@ -15,6 +15,8 @@ export interface Store {
 
 export let Store = makeStore();
 
+declare const module: any;
+
 if (module.hot) {
   console.log("module.hot");
   module.hot.dispose(function() {
