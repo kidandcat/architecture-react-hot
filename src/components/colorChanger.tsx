@@ -3,7 +3,6 @@ import { Store } from "../State/store";
 import { observer } from "mobx-react";
 import { changeColor } from "../State/actions";
 import { SyntheticEvent } from "react";
-import { Store } from "../State/store";
 import { changeTempColor } from "../State/actions";
 
 @observer
