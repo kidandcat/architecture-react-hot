@@ -3,7 +3,20 @@ import { reaction } from "mobx";
 import { Store } from "./store";
 import { logger } from "./effects";
 
+let Reactions = [];
+
 export const LoadReactions = () => {
-  reaction(() => Store.color, logger);
-  reaction(() => Store.time, tick, { delay: 1000 });
+  Reactions = Reactions.filter(r => r() && false);
+  Reactions = [
+    reaction(() => Store.color, logger),
+    reaction(() => Store.time, tick, { delay: 1000 })
+  ];
 };
+
+declare const module: any;
+
+if (module.hot) {
+  module.hot.dispose(() => {
+    Reactions = Reactions.filter(r => r() && false);
+  });
+}
