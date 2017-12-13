@@ -8,6 +8,12 @@ export const changeColor = action((newColor: string) => {
   }
 });
 
+export const changeTempColor = action((newColor: string) => {
+  if (Store.tempColor != newColor) {
+    Store.tempColor = newColor;
+  }
+});
+
 export const tick = action(() => {
   Store.time = new Date().toUTCString();
 });
