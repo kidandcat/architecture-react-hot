@@ -18,14 +18,11 @@ export let Store = makeStore();
 declare const module: any;
 
 if (module.hot) {
-  console.log("module.hot");
   module.hot.dispose(function() {
-    console.log("disposed");
     window.localStorage.setItem("_STORE", JSON.stringify(toJS(Store)));
   });
 
   module.hot.accept(function() {
-    console.log("accepted");
     const storedStore = window.localStorage.getItem("_STORE");
     if (storedStore) {
       makeStore = () => {
