@@ -11,6 +11,7 @@ tsconfig.json, etc) and they will magically work!.
 ```
 npm install
 npm install -g parcel-bundler
+npm install -g typescript
 ```
 
 ## Usage
@@ -18,13 +19,13 @@ npm install -g parcel-bundler
 Dev Server with Hot Reloader:
 
 ```
-parcel index.html
+npm start
 ```
 
 Build:
 
 ```
-parcel build index.html
+npm run build
 ```
 
 ## State Flow
