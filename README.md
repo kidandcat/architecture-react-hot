@@ -10,8 +10,6 @@ tsconfig.json, etc) and they will magically work!.
 
 ```
 npm install
-npm install -g parcel-bundler
-npm install -g typescript
 ```
 
 ## Usage
