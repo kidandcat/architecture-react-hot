@@ -11,8 +11,7 @@
     "noLib": false,
     "suppressImplicitAnyIndexErrors": true,
     "experimentalDecorators": true,
-    "skipLibCheck": true,
-    "watch": true
+    "skipLibCheck": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
