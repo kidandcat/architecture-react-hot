@@ -14,6 +14,16 @@ npm install -g parcel-bundler
 npm install -g typescript
 ```
 
+```diff
+-Required
+```
+
+Because ParcelJS is brand new and Typescript support is being developed, we need to use tsc (typescript command line compiler) to compile our code to plain Javascript before passing it to Parcel. For that purpose, if you are using VS Code, there is already a config file to execute tsc every time you save. You can get the plugin here:
+
+https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave
+
+If you can't use it, you will need to run tsc every time you want to hot reload, or go without Typescript
+
 ## Usage
 
 Dev Server with Hot Reloader:
