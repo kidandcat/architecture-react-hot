@@ -1,10 +1,11 @@
 import { observable, toJS } from "mobx";
 
-let makeStore = () => observable({
-  color: "black",
-  time: new Date().toUTCString(),
-  tempColor: ""
-});
+let makeStore = () =>
+  observable({
+    color: "black",
+    time: new Date().toUTCString(),
+    tempColor: ""
+  });
 
 export let Store = makeStore();
 

@@ -13,13 +13,24 @@
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.0.3"
+    "@types/jest": "^21.1.8",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "jest": "^21.2.1",
+    "parcel-bundler": "^1.0.3",
+    "ts-jest": "^21.2.4",
+    "typescript": "^2.6.2"
   },
   "scripts": {
     "start": "parcel index.html",
-    "build": "tsc --p tsconfig.json && parcel build index.html --no-minify"
+    "build": "tsc --p tsconfig.json && parcel build index.html --no-minify",
+    "test": "tsc --p tsconfig.json && jest --coverage"
   },
   "keywords": [],
   "author": "Jairo Caro-Accino Viciana",
-  "license": "MIT"
+  "license": "MIT",
+  "jest": {
+    "testRegex": "^.*test.js$",
+    "setupFiles": ["./test-setup/shims.js", "./test-setup/.jestrc.js"]
+  }
 }

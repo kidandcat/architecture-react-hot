@@ -12,7 +12,9 @@ export class App extends React.Component {
         <h2>Hello World!!</h2>
         <div>
           <ColorChanger />
-          Here you have a {Store.color} Clock: <Clock />
+          <span>Here you have a </span>
+          <span style={{ color: Store.color }}>{Store.color} </span> clock:
+          <Clock />
         </div>
       </div>
     );
