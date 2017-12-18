@@ -1,20 +1,22 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
-    "declaration": false,
-    "noImplicitAny": false,
+    "outDir": "./lib/",
+    "target": "es5",
     "sourceMap": true,
-    "baseUrl": "./src/",
+    "declaration": true,
     "jsx": "react",
-    "outDir": "lib",
-    "noLib": false,
-    "suppressImplicitAnyIndexErrors": true,
-    "experimentalDecorators": true,
-    "allowJs": true
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "compileOnSave": false,
   "include": [
     "src/**/*"
   ]

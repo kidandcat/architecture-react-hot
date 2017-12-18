@@ -1,16 +1,15 @@
-import { tick } from "state/actions";
+import { tick } from "./actions";
 import { reaction } from "mobx";
-import { Store } from "state/store";
-import { logger } from "state/effects";
-import { Scolor, Stime } from "state/selectors";
+import { Store } from "./store";
+import { logger } from "./effects";
 
 let Reactions = [];
 
 export const LoadReactions = () => {
   Reactions = Reactions.filter(r => r() && false);
   Reactions = [
-    reaction(() => Store[Scolor], logger),
-    reaction(() => Store[Stime], tick, { delay: 1000 })
+    reaction(() => Store.color.value, logger),
+    reaction(() => Store.time, tick, { delay: 1000 })
   ];
 };
 

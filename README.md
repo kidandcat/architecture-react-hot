@@ -10,8 +10,6 @@ tsconfig.json, etc) and they will magically work!.
 
 ```
 npm install
-npm install -g parcel-bundler
-npm install -g typescript
 ```
 
 ## Usage
@@ -26,6 +24,12 @@ Build:
 
 ```
 npm run build
+```
+
+Test:
+
+```
+npm test
 ```
 
 ## State Flow
@@ -46,4 +50,3 @@ npm run build
 
 The Store.js saves the state in LocalStorage when Hot module is removing a
 component so you will have it untouched.
-

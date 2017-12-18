@@ -4,7 +4,7 @@
       {
         "match": ".*",
         "cmd":
-          "C:\\Users\\jairo.viciana\\AppData\\Roaming\\npm\\tsc.cmd --p ${workspaceRoot}\\tsconfig.json"
+          "tsc --p ${workspaceRoot}\\tsconfig.json"
       }
     ]
   }

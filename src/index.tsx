@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { App } from "./components/app";
-import { LoadReactions } from "./State/reactions";
-import { tick } from "./State/actions";
+import { LoadReactions } from "./state/reactions";
+import { tick } from "./state/actions";
 
 LoadReactions();
 

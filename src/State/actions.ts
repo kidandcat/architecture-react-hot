@@ -1,17 +1,16 @@
 import { action, whyRun } from "mobx";
-import { Store } from "state/store";
-import { Scolor, StempColor } from "state/selectors";
+import { Store } from "./store";
 
 export const changeColor = action((newColor: string) => {
-  if (Store[Scolor] !== newColor) {
+  if (Store.color.value !== newColor) {
     console.log("color to", newColor);
-    Store[Scolor] = newColor;
+    Store.color.value = newColor;
   }
 });
 
 export const changeTempColor = action((newColor: string) => {
-  if (Store[StempColor] != newColor) {
-    Store[StempColor] = newColor;
+  if (Store.color.tempValue != newColor) {
+    Store.color.tempValue = newColor;
   }
 });
 

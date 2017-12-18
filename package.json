@@ -4,22 +4,41 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@babel/core": "^7.0.0-beta.34",
-    "@babel/preset-typescript": "^7.0.0-beta.34",
-    "@types/react": "^16.0.27",
     "mobx": "^3.4.0",
     "mobx-react": "^4.3.5",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.0.3"
+    "@babel/core": "^7.0.0-beta.35",
+    "@babel/preset-typescript": "^7.0.0-beta.35",
+    "@types/enzyme": "^3.1.6",
+    "@types/jest": "^21.1.8",
+    "@types/react": "^16.0.31",
+    "@types/react-dom": "^16.0.3",
+    "@types/webpack-env": "^1.13.3",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "jest": "^21.2.1",
+    "npm-run-all": "^4.1.2",
+    "parcel-bundler": "^1.2.0",
+    "ts-jest": "^21.2.4",
+    "typescript": "^2.6.2"
   },
   "scripts": {
     "start": "parcel index.html",
-    "build": "tsc --p tsconfig.json && parcel build index.html --no-minify"
+    "build": "parcel build index.html",
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "Jairo Caro-Accino Viciana",
-  "license": "MIT"
+  "license": "MIT",
+  "jest": {
+    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "setupFiles": ["./test-setup/shims.js", "./test-setup/.jestrc.js"],
+    "testRegex": "/src/.*\\.test\\.(ts|tsx|js)$"
+  }
 }

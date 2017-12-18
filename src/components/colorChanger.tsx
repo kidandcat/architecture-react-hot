@@ -1,10 +1,9 @@
 import * as React from "react";
-import { Store } from "state/store";
+import { Store } from "../state/store";
 import { observer } from "mobx-react";
-import { changeColor } from "state/actions";
+import { changeColor } from "../state/actions";
 import { SyntheticEvent } from "react";
-import { changeTempColor } from "state/actions";
-import { StempColor } from "state/selectors";
+import { changeTempColor } from "../state/actions";
 
 @observer
 export class ColorChanger extends React.Component<{}, {}> {
@@ -16,9 +15,9 @@ export class ColorChanger extends React.Component<{}, {}> {
           onChange={e => {
             changeTempColor(e.currentTarget.value);
           }}
-          value={Store[StempColor]}
+          value={Store.color.tempValue}
         />
-        <button onClick={() => changeColor(Store[StempColor])}>
+        <button onClick={() => changeColor(Store.color.tempValue)}>
           Change color
         </button>
       </div>
