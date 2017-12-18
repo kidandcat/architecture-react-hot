@@ -1,7 +1,8 @@
 import * as React from "react";
-import { Clock } from "./clock";
-import { ColorChanger } from "./colorChanger";
-import { Store } from "../State/store";
+import { Clock } from "components/clock";
+import { ColorChanger } from "components/colorChanger";
+import { Store } from "state/store";
+import { Scolor } from "state/selectors";
 import { observer } from "mobx-react";
 
 @observer
@@ -9,10 +10,12 @@ export class App extends React.Component {
   render() {
     return (
       <div>
-        <h2>Hello World!!</h2>
+        <h1>Hello World!</h1>
         <div>
           <ColorChanger />
-          Here you have a {Store.color} Clock: <Clock />
+          Here you have a Clock coloured with{" "}
+          <span style={{ color: Store[Scolor] }}>{Store[Scolor]}</span>:
+          <Clock />
         </div>
       </div>
     );

@@ -1,10 +1,13 @@
 import * as React from "react";
 import { observer } from "mobx-react";
-import { Store } from "../State/store";
+import { Store } from "state/store";
+import { Scolor, Stime } from "state/selectors";
 
 @observer
 export class Clock extends React.Component<{}, {}> {
   render() {
-    return <div style={{ color: Store.color }}>{Store.time.split(" ")[4]}</div>;
+    return (
+      <div style={{ color: Store[Scolor] }}>{Store[Stime].split(" ")[4]}</div>
+    );
   }
 }

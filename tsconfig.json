@@ -6,6 +6,7 @@
     "declaration": false,
     "noImplicitAny": false,
     "sourceMap": true,
+    "baseUrl": "./src/",
     "jsx": "react",
     "outDir": "lib",
     "noLib": false,
@@ -14,5 +15,7 @@
     "allowJs": true
   },
   "compileOnSave": false,
-  "include": ["src/**/*"]
+  "include": [
+    "src/**/*"
+  ]
 }
