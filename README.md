@@ -2,9 +2,9 @@
 
 ## Description
 
-Very simple architecture with React + ParcelJS + Typescript + MobX. Thanks to
-ParcelJS you just need to create your config files like always (.babelrc,
-tsconfig.json, etc) and they will magically work!.
+Very simple architecture with React + ParcelJS + Typescript + MobX. (And testing with Jest, of course) 
+
+Thanks to ParcelJS you just need to create your config files like always (.babelrc, tsconfig.json, etc) and they will magically work!
 
 ## Install
 
