@@ -21,7 +21,7 @@ ShallowWrapper {
         <input
           onChange={[Function]}
           type="text"
-          value=""
+          value="red"
         />,
         <button
           onClick={[Function]}
@@ -39,7 +39,7 @@ ShallowWrapper {
         "props": Object {
           "onChange": [Function],
           "type": "text",
-          "value": "",
+          "value": "red",
         },
         "ref": null,
         "rendered": null,
@@ -70,7 +70,7 @@ ShallowWrapper {
           <input
             onChange={[Function]}
             type="text"
-            value=""
+            value="red"
           />,
           <button
             onClick={[Function]}
@@ -88,7 +88,7 @@ ShallowWrapper {
           "props": Object {
             "onChange": [Function],
             "type": "text",
-            "value": "",
+            "value": "red",
           },
           "ref": null,
           "rendered": null,
