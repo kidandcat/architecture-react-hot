@@ -1,9 +1,9 @@
 import * as React from "react";
 import { shallow } from "enzyme";
 
-import { App } from "./app";
+import { Clock } from "./clock";
 
-test("<App />", () => {
-  const wrapper = shallow(<App />);
+test("<Clock />", () => {
+  const wrapper = shallow(<Clock />);
   expect(wrapper).toMatchSnapshot();
 });

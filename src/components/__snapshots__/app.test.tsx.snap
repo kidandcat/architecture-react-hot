@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          Hello World!
+        </h1>,
+        <div>
+          <ColorChanger />
+          Here you have a Clock coloured with
+           
+          <span
+            style={
+              Object {
+                "color": "black",
+              }
+            }
+          >
+            black
+          </span>
+          :
+          <Clock />
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Hello World!",
+        },
+        "ref": null,
+        "rendered": "Hello World!",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <ColorChanger />,
+            "Here you have a Clock coloured with",
+            " ",
+            <span
+              style={
+                Object {
+                  "color": "black",
+                }
+              }
+            >
+              black
+            </span>,
+            ":",
+            <Clock />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "Here you have a Clock coloured with",
+          " ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "black",
+              "style": Object {
+                "color": "black",
+              },
+            },
+            "ref": null,
+            "rendered": "black",
+            "type": "span",
+          },
+          ":",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Hello World!
+          </h1>,
+          <div>
+            <ColorChanger />
+            Here you have a Clock coloured with
+             
+            <span
+              style={
+                Object {
+                  "color": "black",
+                }
+              }
+            >
+              black
+            </span>
+            :
+            <Clock />
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Hello World!",
+          },
+          "ref": null,
+          "rendered": "Hello World!",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <ColorChanger />,
+              "Here you have a Clock coloured with",
+              " ",
+              <span
+                style={
+                  Object {
+                    "color": "black",
+                  }
+                }
+              >
+                black
+              </span>,
+              ":",
+              <Clock />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "Here you have a Clock coloured with",
+            " ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "black",
+                "style": Object {
+                  "color": "black",
+                },
+              },
+              "ref": null,
+              "rendered": "black",
+              "type": "span",
+            },
+            ":",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
