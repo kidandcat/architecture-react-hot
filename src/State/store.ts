@@ -1,31 +1,47 @@
-import { observable, toJS } from "mobx";
+import { createStore, applyMiddleware, compose } from "redux";
+import { createEpicMiddleware } from "redux-observable";
+import logger from "redux-logger";
+import { rootEpic } from "./epics";
+import { rootReducer } from "./reducers";
 
-let makeStore = () =>
-  observable({
-    color: {
-      value: "black",
-      tempValue: ""
-    },
-    time: new Date().toUTCString()
-  });
+//const isDevEnv = process.env.NODE_ENV === "development";
+const isDevEnv = true;
 
-export let Store = makeStore();
+function _getMiddleware() {
+  let middleware = [createEpicMiddleware(rootEpic)];
 
-declare const module: any;
+  if (isDevEnv) {
+    middleware = [...middleware, logger];
+  }
 
-if (module.hot) {
-  module.hot.dispose(function() {
-    window.localStorage.setItem("_STORE", JSON.stringify(toJS(Store)));
-  });
-
-  module.hot.accept(function() {
-    const storedStore = window.localStorage.getItem("_STORE");
-    if (storedStore) {
-      makeStore = () => {
-        const store = observable(JSON.parse(storedStore));
-        return store;
-      };
-      Store = makeStore();
-    }
-  });
+  return applyMiddleware(...middleware);
 }
+
+function _getEnhancers() {
+  let enhancers = [];
+
+  if (isDevEnv && window.devToolsExtension) {
+    enhancers = [...enhancers, window.devToolsExtension()];
+  }
+
+  return enhancers;
+}
+
+function _enableHotLoader(store) {
+  if (isDevEnv) {
+    (module as any).hot.accept("./reducers", () => {
+      const nextRootReducer = require("./reducers/index");
+      store.replaceReducer(nextRootReducer);
+    });
+  }
+}
+
+export const configureStore = (initialState: any) => {
+  const store = compose(_getMiddleware(), ..._getEnhancers())(createStore)(
+    rootReducer,
+    initialState
+  );
+
+  _enableHotLoader(store);
+  return store;
+};
