@@ -34,18 +34,3 @@ Test:
 npm test
 ```
 
-## State Flow
-
-* Actions
-  * Actions are everything that changes the State, you emmit actions by using the
-    action creators. Look @connect decorator to see how to pass them to your components
-* Reducers
-  * They are any action that do not modify the State, the best exampe is a
-    logger.
-* Selectors
-  * These are functions that receive the state and an Action, and return a new state
-    modified by that action.
-* Epics
-  * They are functions that listen to an ActionsObservable and react to them doing
-    side effects. The most powerfull way for making async actions with redux such as
-    ajax requests.
